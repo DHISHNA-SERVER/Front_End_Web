@@ -93,7 +93,8 @@ body{
 }
 
 .card:hover .imgB{
-	transform: rotateY(-135deg);
+    transform: rotateY(-135deg);
+    background-color: red;
 }
 
 /* ========================================== */
