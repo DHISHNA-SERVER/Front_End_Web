@@ -94,7 +94,6 @@ body{
 
 .card:hover .imgB{
     transform: rotateY(-135deg);
-    display: none;
 }
 
 /* ========================================== */
