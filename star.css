@@ -62,5 +62,6 @@ canvas {
 {
   .logo{
     background-color: none;
+    box-shadow:none;
   }
 }
