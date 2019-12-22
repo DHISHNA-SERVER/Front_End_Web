@@ -48,4 +48,6 @@ canvas {
   height: 300px;
   margin: auto;
   text-align: center;
+  box-shadow: 0px 0px 20px purple;
+  border-radius: 50%;
 }
