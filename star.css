@@ -13,6 +13,7 @@ canvas {
   top:0;
   left:0;
   z-index: -1;
+  
 }
 .text-box {
   font-size: 60px;
@@ -22,7 +23,7 @@ canvas {
   text-transform: uppercase;
   color:rgb(238, 238, 238);
 }
-.button-wrapper {
+/* .button-wrapper {
   display: flex;
   justify-content: center;
   align-items: center;
@@ -41,7 +42,7 @@ canvas {
   border: 1px solid white;
   background: black;
   cursor: pointer;
-}
+} */
 
 .logo{
   height: 300px;
@@ -58,6 +59,7 @@ canvas {
   box-shadow: 0 0 30px 20px rgb(235, 12, 235);
   filter: brightness(120%) saturate();
 }
+
 
 @media screen and (max-width:450px)
 {
