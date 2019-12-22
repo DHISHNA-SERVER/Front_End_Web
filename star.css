@@ -56,6 +56,7 @@ canvas {
 
 .logo:hover{
   box-shadow: 0 0 30px 20px rgb(235, 12, 235);
+  filter: brightness(120%);
 }
 
 @media screen and (max-width:450px)
@@ -63,5 +64,6 @@ canvas {
   .logo{
     background-color: none;
     box-shadow:none;
+  
   }
 }
