@@ -4,9 +4,13 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
-    <link rel="stylesheet" type="text/css" href="star.css" />
+    <link rel="stylesheet" type="text/css" href="css/star.css" />
     <link rel="stylesheet" href="css/header.css">
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/3.7.2/animate.min.css" rel="stylesheet"  crossorigin="anonymous">
     <link href="https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css" rel="stylesheet" integrity="sha384-wvfXpqpZZVQGK6TAh5PVlGOfQNHSoD2xbE+QkPxCAFlNEevoEH3Sl0sibVcOQVnN" crossorigin="anonymous">
+
+    <link rel="stylesheet" href="./style.css">
+
   </head>
   <body>
        <!-- navbar -->
@@ -24,7 +28,7 @@
                   </div>   
                   <div class="links">
                       <a href="home2.html">HOME</a>
-                      <a href="about.html">About</a>
+                      <a href="about.html">ABOUT</a>
                           <a href="event.html">EVENTS</a>
                           <a href="workshop.html">WORKSHOPS</a>
                           <a href="exhibition.html">EXHIBITION</a>
@@ -58,13 +62,60 @@
 
 
 
-    <div class="text-box">
-      <div class="heading"><img class="logo" src="img/logo.png" alt=""></div>
+    <div class="text-box animated zoomIn delay-1s">
+      <div class="master_bubble" onclick="boomOpen()"><img id="logo" class="logo" src="img/logo.png" alt="">
+        <div id="bubble1" class=" boom"><i id="boomLink" class="fa fa-calendar"></i></div>
+        <div id="bubble2" class=" boom"> <i id="boomLink" class="fa fa-calendar"></i></div>
+        <div id="bubble3" class=" boom"><i id="boomLink" class="fa fa-calendar"></i></div>
+        <div id="bubble4" class=" boom"><i id="boomLink" class="fa fa-calendar"></i></div>
+        <div id="bubble5" class=" boom"><i id="boomLink" class="fa fa-calendar"></i></div>
+        <div id="bubble6" class=" boom"><i id="boomLink" class="fa fa-calendar"></i></div>
+        <div id="bubble7" class=" boom"><i id="boomLink" class="fa fa-calendar"></i></div>
+        <div id="bubble8" class=" boom"><i id="boomLink" class="fa fa-calendar"></i></div>
+      </div>
+      
       <!-- <div class="button-wrapper">
           <div class="button">ABOUT US</div>
           <div class="button">Contact Us</div>
       </div> -->
     </div>
+
+    <script>
+      var d_flag = true;
+      var ele = document.getElementsByClassName('boom');
+      var logo =  document.getElementById('logo');
+
+      function boomOpen(){
+        if(d_flag)
+        { 
+          d_flag = false
+          logo.classList.add('bright')
+          for(var i=0;i<ele.length;i++)
+          {
+          ele[i].classList.add('bubble')
+          }
+        }
+        else{
+          d_flag = true
+          logo.classList.remove('bright')
+          for(var i=0;i<ele.length;i++)
+          {
+          ele[i].classList.remove('bubble')
+          }
+        }
+        
+        
+      }
+     
+      
+    </script>
+
+  <!-- ************************************ -->
+
+
+  <!-- ************************************ -->
+    
+<!-- =================================================================================== -->
 
    <script src='https://cdnjs.cloudflare.com/ajax/libs/three.js/r75/three.min.js'></script>
     <script>
@@ -132,6 +183,7 @@
     init();
     
     </script>
+    <!-- =================================================================================== -->
     <script src="js/navbar.js"></script>
   </body>
 </html>
