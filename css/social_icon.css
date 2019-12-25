@@ -64,3 +64,10 @@
 	transform: perspective(1000px) rotate(-30deg) skew(25deg) translate(20px,-20px);
 	box-shadow: -50px 50px 50px  #e614c6;
 }
+
+@media screen and (max-width:400px)
+{
+	.social_dhishna li{
+		margin: 30px 15px;
+	}
+}

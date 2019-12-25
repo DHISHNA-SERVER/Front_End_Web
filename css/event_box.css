@@ -18,7 +18,7 @@ Build the scene and rotate on hover
 
 .scene {
 	width: 260px;
-	height: 400px;
+	height: 300px;
 	margin: 30px;
 	float: left;
 	-webkit-perspective: 1000px;
@@ -29,7 +29,7 @@ Build the scene and rotate on hover
 
 .movie {
 	width: 260px;
-	height: 400px;
+	height: 300px;
 	-webkit-transform-style: preserve-3d;
 	-moz-transform-style: preserve-3d;
 	transform-style: preserve-3d;
@@ -55,7 +55,7 @@ Transform and style the two planes
 .movie .info {
 	position: absolute;
 	width: 260px;
-	height: 400px;
+	height: 300px;
 	background-color: #1d1e20;
 	-webkit-backface-visibility: hidden;
 	-moz-backface-visibility: hidden;
@@ -195,6 +195,11 @@ Fallback
 	position: relative;
 }
 
+
+.movie .info p{
+	max-height: 200px;
+	overflow: hidden;
+}
 /*************************************
 Media Queries
 **************************************/
@@ -202,5 +207,16 @@ Media Queries
 	.scene {
 		float: none;
 		margin: 30px auto 60px;
+	}
+}
+
+@media screen and (max-width: 500px){
+	.movie .info{
+		font-size: 0.6em;
+	}
+
+	.movie .info p{
+		max-height: 200px;
+		overflow: hidden;
 	}
 }

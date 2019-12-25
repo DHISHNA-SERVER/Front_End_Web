@@ -15,6 +15,18 @@ canvas {
   z-index: -20;
   
 }
+
+.theme{
+  position: absolute;
+  z-index: 30;
+  font-size: 1em;
+  color: white;
+ font-family:'Montserrat', sans-serif;
+ bottom: 0;
+ left: 0;
+ padding: 20px;
+ letter-spacing: 2px;
+}
 .text-box {
   font-size: 60px;
   font-family: 'Raleway', sans-serif;
@@ -88,6 +100,22 @@ canvas {
 }
 
 
+#boomLink{
+  font-size: 0.3em;
+  color: purple;
+  text-align: center;
+  transform: translate(15px,-25px);
+
+}
+
+
+
+.bubble:hover{
+  box-shadow: 0 0 30px 20px rgb(235, 12, 235);
+}
+
+
+
 
 .master_bubble >  .bubble:nth-of-type(2){
   margin-left: -150px;
@@ -138,13 +166,7 @@ canvas {
 
 }
 
-#boomLink{
-  font-size: 0.3em;
-  color: purple;
-  text-align: center;
-  transform: translate(10px,-20px);
 
-}
 
 @media screen and (max-width:450px)
 {
@@ -155,7 +177,7 @@ canvas {
   }
 
   .bright{
-    width: 50px;
-    height: 50px;
+    width: 75px;
+    height: 75px;
   }
 }

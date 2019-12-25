@@ -109,3 +109,23 @@ body{
     border-radius: 20px;
 }
 
+@media screen and (max-width:500px)
+{
+    .home_head{
+        font-size: 2em;
+    }
+    .about_p{
+        font-size: 1em;
+    }
+    .card{
+        width: 200px;
+        height: 300px;
+    }
+    .h_text{
+        font-size: 1em;
+    }
+    .details p{
+        font-size: 0.8em;
+        overflow: hidden;
+    }
+}

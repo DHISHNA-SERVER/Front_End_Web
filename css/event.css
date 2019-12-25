@@ -73,10 +73,25 @@ body{
     padding: 20px;
     font-weight: 700;
     font-family:'Montserrat', sans-serif;
+    font-size: 1em;
     color: white;
+    margin-top: 48%;
+    text-align: center;
 
 }
 
 .clearfix{
     padding: 0px;
+}
+
+@media screen and (max-width:500px)
+{
+    .home_head{
+        font-size: 2em;
+        
+    }
+    
+    .filter_link{
+        font-size: 0.8em;
+    }
 }
