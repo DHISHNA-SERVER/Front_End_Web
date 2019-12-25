@@ -104,7 +104,8 @@ canvas {
   font-size: 0.3em;
   color: purple;
   text-align: center;
-  transform: translate(15px,-25px);
+  transform: translate(-5px,-25px);
+  padding: 20px;
 
 }
 
