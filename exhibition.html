@@ -6,8 +6,8 @@
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
     <title>DHISHNA - | EXHIBITION</title>
     <link href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-Vkoo8x4CGsO3+Hhxv8T/Q5PaXtkKtu6ug5TOeNV6gBiFeWPGFN9MuhOf23Q9Ifjh" crossorigin="anonymous">
-    <link href="https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css" rel="stylesheet" integrity="sha384-wvfXpqpZZVQGK6TAh5PVlGOfQNHSoD2xbE+QkPxCAFlNEevoEH3Sl0sibVcOQVnN" crossorigin="anonymous">
-    <link href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/3.7.2/animate.min.css" rel="stylesheet"  crossorigin="anonymous">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.8.2/css/all.min.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/3.7.2/animate.min.css">
 
     <link rel="stylesheet" href="css/exhibition.css">
     <link rel="stylesheet" href="css/common.css">
@@ -17,80 +17,20 @@
 </head>
 <body>
 
-    <!-- ================================================================== -->
-    <script src='https://cdnjs.cloudflare.com/ajax/libs/three.js/r75/three.min.js'></script>
-    <script>
-    let scene, camera, renderer, stars, starGeo;
-
-    function init() {
-
-      scene = new THREE.Scene();
-
-      camera = new THREE.PerspectiveCamera(60,window.innerWidth / window.innerHeight, 1, 1000);
-      camera.position.z = 1;
-      camera.rotation.x = Math.PI/2;
-
-      renderer = new THREE.WebGLRenderer();
-      renderer.setSize(window.innerWidth, window.innerHeight);
-      document.body.appendChild(renderer.domElement);
-
-      starGeo = new THREE.Geometry();
-      for(let i=0;i<6000;i++) {
-        star = new THREE.Vector3(
-          Math.random() * 600 - 300,
-          Math.random() * 600 - 300,
-          Math.random() * 600 - 300
-        );
-        star.velocity = 0;
-        star.acceleration = 0.01;
-        starGeo.vertices.push(star);
-      }
-
-      let sprite = new THREE.TextureLoader().load( 'star.png' );
-      let starMaterial = new THREE.PointsMaterial({
-        color: 0xaaaaaa,
-        size: 0.7,
-        map: sprite
-      });
-
-      stars = new THREE.Points(starGeo,starMaterial);
-      scene.add(stars);
-
-      window.addEventListener("resize", onWindowResize, false);
-
-      animate(); 
-    }
-    function onWindowResize() {
-        camera.aspect = window.innerWidth / window.innerHeight;
-        camera.updateProjectionMatrix();
-        renderer.setSize(window.innerWidth, window.innerHeight);
-      }
-    function animate() {
-      starGeo.vertices.forEach(p => {
-        p.velocity += p.acceleration
-        p.y -= p.velocity;
-        
-        if (p.y < -200) {
-          p.y = 200;
-          p.velocity = 0;
-        }
-      });
-      starGeo.verticesNeedUpdate = true;
-      stars.rotation.y +=0.002;
     
-      renderer.render(scene, camera);
-      requestAnimationFrame(animate);
-    }
-    init();
-    
-    </script>
-    <!-- =================================================================================== -->
-     <!-- back button -->
-     <div class="back_button">
-        <a href="home2.html"><img src="img/logo.png" alt=""></a>
-      </div>
+     <!-- canvas section -->
+     <section>
+        <script src='https://cdnjs.cloudflare.com/ajax/libs/three.js/r75/three.min.js'></script>
+        <script src="stars.js"></script>
+    </section>
+    <!-- canvas ends -->
 
-    <!-- navbar -->
+
+    <!-- back button -->
+    <div class="back_button animated zoomIn delay-1s">
+        <a href="home_2.html"><img src="img/logo.png" alt=""></a>
+    </div>
+
 
     <!-- navbar -->
     <section>
@@ -106,13 +46,13 @@
                          <i class="fa fa-times" aria-hidden="true"></i>
                     </div>   
                     <div class="links">
-                        <a href="home2.html">HOME</a>
+                        <a href="home_2.html">HOME</a>
                         <a href="about.html">About</a>
                             <a href="event.html">EVENTS</a>
                             <a href="workshop.html">WORKSHOPS</a>
                             <a href="exhibition.html">EXHIBITION</a>
                             <a href="outreach.html">OUTREACH</a>
-                            <a href="map.html">MAP</a>
+                            <a href="">MAP</a>
                             <a href="contact.html">CONTACT</a>
                     </div>
         
@@ -146,7 +86,7 @@
             <div class="row">
                 <div class="space"></div>
                 <div class="col col-12 text-center text-md-left">
-                    <h3 class="home_head animated fadeInUp delay-1s">EXHIBITION</h3>
+                    <h3 class="home_head animated fadeInUp delay-1s">EXHIBITIONS</h3>
                 </div>
             </div><!-- &&row -->
             
@@ -164,7 +104,7 @@
                     <div class="row">
 
                     <!-- circle -->
-                    <div class="col col-12 col-md-6 animated zoomIn delay-1s">
+                    <!-- <div class="col col-12 col-md-6 animated zoomIn delay-1s">
                         <div class="square">
                             <span></span>
                             <span></span>
@@ -175,57 +115,8 @@
                                 <a href="#">Read More</a>
                             </div>
                         </div>
-                    </div>
+                    </div> -->
                     <!--  -->
-
-
-                     <!-- circle -->
-                     <div class="col col-12 col-md-6 animated zoomIn delay-1s">
-                        <div class="square">
-                            <span></span>
-                            <span></span>
-                            <span></span>
-                            <div class="content">
-                                <div>Title</div>
-                                <p>blah blah</p>
-                                <a href="#">Read More</a>
-                            </div>
-                        </div>
-                    </div>
-                    <!--  -->
-
-
-                     <!-- circle -->
-                     <div class="col col-12 col-md-6 animated zoomIn delay-1s">
-                        <div class="square">
-                            <span></span>
-                            <span></span>
-                            <span></span>
-                            <div class="content">
-                                <h2>Title</h2>
-                                <p>blah blah</p>
-                                <a href="#">Read More</a>
-                            </div>
-                        </div>
-                    </div>
-                    <!--  -->
-
-
-                     <!-- circle -->
-                     <div class="col col-12 col-md-6 animated zoomIn delay-1s">
-                        <div class="square">
-                            <span></span>
-                            <span></span>
-                            <span></span>
-                            <div class="content">
-                                <h2>Title</h2>
-                                <p>blah blah</p>
-                                <a href="#">Read More</a>
-                            </div>
-                        </div>
-                    </div>
-                    <!--  -->
-
 
 
                     </div>
@@ -240,16 +131,16 @@
         <div class="container">
             <div class="row">
                 <div class="col col-12 ">
-                    <ul class="social_dhishna ">
+                    <ul class="social_dhishna animated fadeInUp delay-1s">
                         <li>
-                            <a href="https://www.facebook.com/dhishna.cusat/" title=""><i class="fa fa-facebook-f" ></i></a>
+                            <a href="https://www.facebook.com/dhishna.cusat/" title=""><i class="fab fa-facebook-f" ></i></a>
                         </li>
                         <li>
-                            <a href="https://www.instagram.com/dhishna.cusat/" title=""><i class="fa fa-instagram" ></i></a>
+                            <a href="https://www.instagram.com/dhishna.cusat/" title=""><i class="fab fa-instagram" ></i></a>
                         </li>
                        
                         <li>
-                            <a href="https://www.youtube.com/channel/UCxa_SzyC6Ylv2M19RGVCArg" title=""><i class="fa fa-youtube" ></i></a>
+                            <a href="https://www.youtube.com/channel/UCxa_SzyC6Ylv2M19RGVCArg" title=""><i class="fab fa-youtube" ></i></a>
                         </li>
                         
                         

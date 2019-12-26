@@ -13,7 +13,7 @@
     height: 0;
     width: 100%;
     position: fixed; /* Stay in place */
-    z-index: 1000; /* Sit on top */
+    z-index: 50; /* Sit on top */
     left: 0;
     top: 0;
     background-color: rgb(0,0,0);
@@ -39,7 +39,7 @@
     
     padding: 8px;
     text-decoration: none;
-    font-size: 2em;
+    font-size: 36px;
     color: #ffffff;
     display: block; /* Display block instead of inline */
     transition: 0.3s; /* Transition effects on hover (color) */
@@ -51,8 +51,24 @@
     text-shadow: 0px 0px 30px #E62DE8;
     cursor: pointer;
   }
-
   
+  /* Position the close button (top right corner) */
+  .overlay .closebtn {
+    position: fixed;
+    top: 0px;
+    right: 10px;
+    font-size: 3em;
+  }
+  
+  /* When the height of the screen is less than 450 pixels, change the font-size of the links and position the close button again, so they don't overlap */
+  @media screen and (max-height: 450px) {
+    .overlay a {font-size: 20px}
+    .overlay .closebtn {
+      font-size: 40px;
+      top: 15px;
+      right: 35px;
+    }
+  }
   /* =========================== ANIMATED BACKROUND =================*/
 
   .area{
@@ -203,17 +219,6 @@
 
 /* ========================== */
 
-
-  
-  /* Position the close button (top right corner) */
-  .overlay .closebtn {
-    position: fixed;
-    top: 0px;
-    right: 10px;
-    font-size: 3em;
-  }
-  
-
 .burger{
     position: fixed;
     padding: 10px;
@@ -231,7 +236,7 @@
 
 .burger:hover{
     text-shadow: 0px 0px 20px #E62DE8;
-    color: #E62DE8;
+    color: #E62DE8;;
 }
 
 #closebutton{
@@ -239,23 +244,3 @@
     z-index: 100;
 }
 
-/* ==================== */
-/* When the height of the screen is less than 450 pixels, change the font-size of the links and position the close button again, so they don't overlap */
-@media screen and (max-width: 500px) {
-    .overlay a {
-        font-size: 1.5em;
-    }
-    .overlay .closebtn {
-      font-size: 40px;
-      top: 15px;
-      right: 35px;
-    }
-    .burger{
-        font-size: 1.5em;
-        right: 0;
-        padding-right: 5px;
-        text-align: right;
-       height: 50px;
-       width: 50px;
-    }
-  }

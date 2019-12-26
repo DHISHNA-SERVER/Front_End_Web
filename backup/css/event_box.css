@@ -61,7 +61,8 @@ Transform and style the two planes
 	-moz-backface-visibility: hidden;
 	backface-visibility: hidden;
 	font-family:'Montserrat', sans-serif;
-	font-size: 1em;	
+
+	
 }
 
 .movie .poster  {
@@ -119,8 +120,10 @@ Movie information
 .info header {
 	color: #FFF;
 	padding: 7px 10px;
+	/* font-weight: bold; */
 	background-size: contain;
 	background-repeat: no-repeat;
+	/* text-shadow: 0px 1px 1px rgba(0,0,0,1); */
 }
 
 .info header h1 {
@@ -135,7 +138,6 @@ Movie information
 	color: white;
 	line-height: 1.4em;
 	border-top: 10px solid #555;
-	font-family:'Montserrat', sans-serif;
 }
 
 /*************************************

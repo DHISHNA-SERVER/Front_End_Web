@@ -37,12 +37,12 @@
 
 .social_dhishna li a:before{
 	position: absolute;
-	left: -10px;
-	top: 4.5px;
+	left: -5px;
+	top: 5px;
 	content: "";
 	height: 100%;
-	width: 10px;
-	background-color: #070707;
+	width: 5px;
+	background-color: #1d1e20;
 	transition: .5s;
 	transform: rotate(0deg) skewY(-45deg);
 }
@@ -50,10 +50,10 @@
 
 .social_dhishna li a:after{
 	position: absolute;
-	bottom: -10px;
-	left: -5px;
+	bottom: -5px;
+	left: -2px;
 	content: "";
-	height: 10px;
+	height: 5px;
 	width:100%;
 	background-color: #1d1e20;
 	transition: .5s;

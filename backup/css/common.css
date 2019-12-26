@@ -1,10 +1,3 @@
-body {
-    width: 100vw;
-    height: 100vh;
-    margin: 0;
-    background: black;
- }
-
 
 .space{
     width: 100%;
@@ -21,38 +14,31 @@ body {
     border-radius: 20px;
 }
 
-.home_head{
-    font-size: 3em;
-    color: white;
-    font-family:'Montserrat', sans-serif;
-}
-
-a{
-    color: rgb(206, 0, 206);
-}
-
 /* -------------------------------- */
 
 canvas {
     position: fixed;
     top:0;
     left:0;
-    z-index: -200;
+    z-index: -20;
     
-}
+  }
 
 .back_button{
     width: 100px;
     height: 100px;
+
     position: fixed;
     top: 0;
     left: 0;
     z-index: 200;
+
 }
 
 .back_button img{
     width: 100%;
     height: 100%;
+
 }
 
 @media screen and (max-width:500px)
@@ -60,13 +46,5 @@ canvas {
     .back_button{
         width: 70px;
         height: 70px;
-    }
-    .home_head{
-        font-size: 2em;
-        
-    }
-    
-    .filter_link{
-        font-size: 0.8em;
     }
 }
